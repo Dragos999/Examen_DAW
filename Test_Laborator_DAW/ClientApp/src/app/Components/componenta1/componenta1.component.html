@@ -1,0 +1,34 @@
+<h2>Adauga produs</h2>
+<form [formGroup]="addProdus">
+    <label>Nume:</label>
+    <input type="string" formControlName="Nume">
+    <label>Pret:</label>
+    <input type="number" formControlName="Pret">
+</form>
+<button (click)="addNewProdus()" >AddProdus</button>
+<hr>
+<h2>Adauga comanda</h2>
+<form [formGroup]="addComanda">
+    <label>Adresa::</label>
+    <input type="string" formControlName="Adresa">
+    
+</form>
+<button (click)="addNewComanda()" >AddComanda</button>
+<hr>
+<h2>Assign comanda-produs</h2>
+<form [formGroup]="addComandaProdus">
+    <label>Id comanda:</label>
+    <input type="string" formControlName="Id_Comanda">
+    <label>Id produs:</label>
+    <input type="string" formControlName="Id_Produs">
+    
+</form>
+<button (click)="addNewComandaProdus()" >Assign</button>
+<hr>
+<h2>Lista Produes:</h2>
+<ul >
+    <li *ngFor="let produs of produse">
+    <div>{{produs.nume}}</div>
+    
+    </li>
+</ul>
